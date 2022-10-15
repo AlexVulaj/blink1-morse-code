@@ -28,18 +28,34 @@ const translation = {
   'w': '.--',
   'x': '-..-',
   'y': '-.--',
-  'z': '--..'
+  'z': '--..',
+  ' ': ' '
 }
 
+const DIT_DURATION = 100
+const DAH_DURATION = DIT_DURATION * 3
+const LETTER_DURATION = DIT_DURATION * 2
+const WORD_DURATION = DIT_DURATION * 6
+
 function blinkMorse(input) {
-  input.toLowerCase().split('').forEach(x => {
-    (translation[x] ?? '').split('').forEach(y => {
-      blink1.setRGB(0, 255, 0)
-      y === '-' ? sleep(400) : sleep(100)
-      blink1.off()
-      sleep(100)
+  input
+    .trim()
+    .replace(/\s\s+/g, ' ')
+    .toLowerCase()
+    .split('')
+    .forEach(x => {
+      (translation[x] ?? '').split('').forEach((y) => {
+        if (y === ' ') {
+          sleep(WORD_DURATION)
+        } else {
+          blink1.setRGB(0, 255, 0)
+          y === '.' ? sleep(DIT_DURATION) : sleep(DAH_DURATION)
+          blink1.off()
+          sleep(DIT_DURATION)
+        }
+      })
+      sleep(LETTER_DURATION)
     })
-  })
 }
 
 function sleep(milliseconds) {
