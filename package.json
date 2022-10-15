@@ -6,6 +6,9 @@
   "dependencies": {
     "node-blink1": "^0.5.1"
   },
+  "scripts": {
+    "test": "jest"
+  },
   "author": {
     "name": "Alex Vulaj",
     "url": "https://github.com/AlexVulaj"
@@ -17,5 +20,8 @@
   "keywords": [
     "blink1",
     "morse"
-  ]
+  ],
+  "devDependencies": {
+    "jest": "^29.2.0"
+  }
 }
