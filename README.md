@@ -13,9 +13,9 @@ input in morse code.
 1. Add to your project
 
 ```javascript
-const blinkmorse = require('blink1-morse-code')
+const {blinkMorse} = require('blink1-morse-code')
 
-blinkmorse("Hello, World!")
+blinkMorse('Hello')
 ```
 
 ## Testing
