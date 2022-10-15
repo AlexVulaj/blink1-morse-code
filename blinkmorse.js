@@ -78,21 +78,21 @@ function calculateTimings(input) {
         .split('')
         .forEach((y) => {
           if (y === ' ') {
-            offTime += DIT_DURATION * 2
+            offTime += 2
           } else {
-            timings.push(offTime / 100)
+            timings.push(offTime)
             offTime = 0;
             if (y === '.') {
-              onTime += DIT_DURATION
+              onTime += 1
             } else {
-              onTime += DIT_DURATION * 3
+              onTime += 3
             }
-            timings.push(onTime / 100)
+            timings.push(onTime)
             onTime = 0
-            offTime += DIT_DURATION
+            offTime += 1
           }
         })
-      offTime += DIT_DURATION * 2
+      offTime += 2
     })
   timings.shift()
   return timings
@@ -106,25 +106,18 @@ function calculateTimings(input) {
  *
  * @param input the string to flash in Morse code.
  */
-function blinkMorse(input) {
+async function blinkMorse(input) {
   const timings = calculateTimings(input)
-  timings.forEach((timing, index) => {
-    if (index % 2 === 0) {
+  for (let i = 0; i < timings.length; i++){
+    const timing = timings[i]
+    if (i % 2 === 0) {
       blink1.setRGB(0, 255, 0)
     } else {
       blink1.off()
     }
-    sleep(timing * DIT_DURATION)
-  })
+    await new Promise(done => setTimeout(() => done(), timing * DIT_DURATION))
+  }
   blink1.off()
-}
-
-function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
 }
 
 exports.calculateTimings = calculateTimings

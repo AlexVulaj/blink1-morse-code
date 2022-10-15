@@ -18,6 +18,10 @@ const blinkmorse = require('blink1-morse-code')
 blinkmorse("Hello, World!")
 ```
 
+## Testing
+
+Tests can be run with `npm test`.
+
 ## Contributing
 
 1. **Fork** this repository on GitHub
