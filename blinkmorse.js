@@ -57,7 +57,7 @@ const DIT_DURATION = 100
  *
  *
  * @param input the string to translate to Morse code timings.
- * @returns {*[]} A sequential array representing the length of each flash, where even-indexed entries represent the
+ * @returns {Number[]} A sequential array representing the length of each flash, where even-indexed entries represent the
  * amount of time that the light was on, and odd-indexed entries represent the amount of time that the light was off.
  * The value is equivalent to the number of <i>dit</i> durations that have passed.
  */
