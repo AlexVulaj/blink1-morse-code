@@ -9,10 +9,12 @@ given input in morse code.
 
 ## Usage
 
+1. Run `npm i blink1-morse-code`.
+1. Add to your project
 ```javascript
-const blink1Morse = require('./blinkmorse')
+const blinkmorse = require('blink1-morse-code')
 
-blink1Morse("Hello, World!")
+blinkmorse("Hello, World!")
 ```
 
 ## Contributing
