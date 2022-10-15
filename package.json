@@ -1,0 +1,20 @@
+{
+  "name": "blink1-morse-code",
+  "version": "1.0.0",
+  "description": "Simple function to make a connected blink(1) device blink out a given input in morse code",
+  "dependencies": {
+    "node-blink1": "^0.5.1"
+  },
+  "author": {
+    "name": "Alex Vulaj",
+    "url": "https://github.com/AlexVulaj"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexVulaj/blink1-morse-code.git"
+  },
+  "keywords": [
+    "blink1",
+    "morse"
+  ]
+}
