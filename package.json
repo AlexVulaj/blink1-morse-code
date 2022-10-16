@@ -1,6 +1,6 @@
 {
   "name": "blink1-morse-code",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple function to make a connected blink(1) device blink out a given input in morse code",
   "main": "blinkmorse.js",
   "dependencies": {
