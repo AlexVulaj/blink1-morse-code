@@ -15,7 +15,7 @@ input in morse code.
 ```javascript
 const {blinkMorse} = require('blink1-morse-code')
 
-blinkMorse('Hello')
+blinkMorse('Hello', {ditLengthMs: 200, color: '#6c57ad'})
 ```
 
 ## Testing
@@ -29,4 +29,4 @@ Tests can be run with `npm test`.
 1. **Commit** changes to your own branch
 1. **Push** your work back up to your fork
 1. Submit a **pull request**
-    1. Please be sure to rebase your branch from the latest "upstream" before making a pull request
+   1. Please be sure to rebase your branch from the latest "upstream" before making a pull request
