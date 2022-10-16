@@ -14,7 +14,9 @@
     "url": "https://github.com/AlexVulaj"
   },
   "files": [
-    "blinkmorse.js"
+    "blinkmorse.js",
+    "translation.js",
+    "utils.js"
   ],
   "repository": {
     "type": "git",
